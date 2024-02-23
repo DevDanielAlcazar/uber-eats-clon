@@ -22,6 +22,11 @@
       {
         "src": "/scripts/(.*)",
         "dest": "/scripts/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/pages/$1"
       }
     ]
-  }  
+  }
+  
