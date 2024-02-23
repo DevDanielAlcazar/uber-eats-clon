@@ -1,33 +1,29 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "./package.json",
-            "use": "@vercel/ncc"
-
-        },
       {
-        "src": "./pages/index.html",
+        "src": "pages/index.html",
         "use": "@vercel/static-build"
       },
       {
-        "src": "./pages/login.html",
+        "src": "pages/login.html",
         "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
         "src": "/statics/(.*)",
-        "dest": "./statics/$1"
+        "dest": "/statics/$1"
       },
       {
         "src": "/styles/(.*)",
-        "dest": "./styles/$1"
+        "dest": "/styles/$1"
       },
       {
         "src": "/scripts/(.*)",
-        "dest": "./scripts/$1"
+        "dest": "/scripts/$1"
       }
     ]
   }
+  
   
