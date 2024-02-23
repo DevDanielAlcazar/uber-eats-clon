@@ -12,16 +12,16 @@
     ],
     "routes": [
       {
-        "src": "./statics(.*)",
+        "src": "/statics/(.*)",
         "dest": "./statics/$1"
       },
       {
-        "src": "./styles/(.*)",
-        "dest": "/styles/$1"
+        "src": "/styles/(.*)",
+        "dest": "./styles/$1"
       },
       {
-        "src": "./scripts/(.*)",
-        "dest": "/scripts/$1"
+        "src": "/scripts/(.*)",
+        "dest": "./scripts/$1"
       }
     ]
   }
