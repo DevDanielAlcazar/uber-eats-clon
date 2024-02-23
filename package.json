@@ -1,9 +1,0 @@
-{
-    "name": "nombre-de-tu-proyecto",
-    "version": "1.0.0",
-    "scripts": {
-      "build": "echo 'No build script specified'"
-    },
-    "dependencies": {}
-  }
-  
