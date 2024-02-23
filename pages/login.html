@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/login_script.js"></script>
+    <link rel="stylesheet" href="../styles/login_styles.css">
+    
+    <link rel="icon" href="../statics/icono_verde_ubereats.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../statics/icono_verde_ubereats.ico" type="image/x-icon">
+    <title>Inicia Sesion | Uber Eats</title>
+</head>
+    <body style="margin: 0%;">
+        <header class="header">
+            <a href="../pages/index.html" class="logo-link">
+                <img src="../statics/images/ubereats-icon-green-white.svg" alt="Logo de Uber Eats">
+            </a>
+            <a href="../pages/index.html" class="home-link">
+                <img src="../statics/images/pagina-de-inicio.png" alt="Pagina de inicio">
+            </a>
+        </header>
+        <main class="main">
+            <div id="mensaje-prueba" class="mensaje-prueba">
+                <p>Prueba la funcionalidad. Ingresa un email válido o haz clic en los botones sociales.</p>
+            </div>
+            <div id="mensaje-inicio-sesion" class="mensaje-inicio-sesion oculto">
+                <p>En este momento estarías iniciando sesión.</p>
+                <p>Desarrollado por Jesús Daniel Nava Alcázar, contáctame: <a href="mailto:dev.daniel.alcazar@gmail.com">dev.daniel.alcazar@gmail.com</a></p>
+                <p>
+                    <a href="https://www.linkedin.com/in/jesus-daniel-nava-alcazar/" target="_blank"><img src="../statics/images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://portafolio-jesus-daniel.netlify.app/" target="_blank"><img src="../statics/images/portafolio.png" alt="Sitio Web"></a>
+                    <a href="https://github.com/DevDanielAlcazar/" target="_blank"><img src="../statics/images/github.png" alt="GitHub"></a>
+                </p>
+            </div>
+
+            <div class="contenedor-opciones-inicio">
+                <div class="iniciar-sesion-email">
+                    <div>
+                    <span class="form-title">¿Cuál es tu número de teléfono o email?</span>
+                    </div>
+                    <div>
+                    <input type="text" id="email" placeholder="Introducir número de teléfono o email">
+                    </div>
+                    <div>
+                    <button class="btn" onclick="verificarEmail()">Continuar</button>
+                    </div>
+                </div>
+
+                <div class="separador-opciones">
+                    <div class="separador-linea-izq"></div>
+                    <span>O</span>
+                    <div class="separador-linea-der"></div>
+                </div>
+                
+                
+                <div class="iniciar-sesion-redes">
+                    <div class="opciones-iniciar-sesion-redes">
+                        <div class="boton-social" onclick="alternarMensaje()">
+                            <img src="../statics/images/google-icon.svg" alt="Logo de Google">
+                            <span>Continuar con Google</span>
+                        </div>
+                        <div class="boton-social" onclick="alternarMensaje()">
+                            <img src="../statics/images/apple-icon.svg" alt="Logo de Apple">
+                            <span>Continuar con Apple</span>
+                        </div>
+                        <div class="boton-social" onclick="alternarMensaje()">
+                            <img src="../statics/images/facebook-icon-blue.png" alt="Logo de Facebook">
+                            <span>Continuar con Facebook</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="separador-opciones">
+                    <div class="separador-linea-izq"></div>
+                    <span>O</span>
+                    <div class="separador-linea-der"></div>
+                </div>
+
+                <div class="iniciar-sesion-qr">
+                    <img src="../statics/images/qr-icon.svg" alt="Código QR">
+                    <span>Inicia sesión con el código QR</span>
+                </div>
+
+                <div class="acetacion-terminos-mensaje">
+                    <span>
+                        Al continuar, aceptas recibir llamadas, mensajes de WhatsApp o SMS, incluso por medios automatizados, de Uber y sus filiales en el número proporcionado.
+                    </span>
+                </div>
+            </div>
+        </main>
+
+
+    </body>
+</html>
