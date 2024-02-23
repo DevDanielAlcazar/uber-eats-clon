@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "Ubermove";
+    src: url("../statics/fonts/ubermovetext.woff2") format("woff2"),
+         url("../statics/fonts/ubermovetext2.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    display: flex;
+    background: black;
+    height: 64px;
+    align-items: center;
+}
+
+.logo-link {
+    margin-left: 5%;
+}
+
+.logo-link img {
+    max-width: 100%;
+   
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: 5%; 
+     
+}
+.home-link img {
+    width: 2rem;
+    opacity: 0.7;
+    
+}
+
+
+.main {
+    font-family: Ubermove;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
+    height: 90vh; /* Hace que el contenedor ocupe el 100% de la altura de la ventana */
+}
+.contenedor-opciones-inicio .iniciar-sesion-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:left;
+}
+
+
+
+.contenedor-opciones-inicio .iniciar-sesion-email input {
+    width: 340px;
+    min-height: 30px;
+    font-size: 17px;
+    
+}
+.contenedor-opciones-inicio .iniciar-sesion-email button {
+    width: 360px;
+    min-height: 48px;
+    font-size: 17px;
+}
+
+
+
+.contenedor-opciones-inicio .iniciar-sesion-email .form-title {
+    text-align: left;
+    width: 80%;
+    font-size: 1.5rem;
+    font-family: Ubermove;
+    color: #000000;
+    
+    
+    
+}
+.contenedor-opciones-inicio .iniciar-sesion-email input[type="text"] {
+    border: none;
+    background-color: #eeeeeeFF; /* Fondo gris */
+    border-radius: 5px;
+    padding: 10px; /* Ajusta según sea necesario */
+}
+.contenedor-opciones-inicio .iniciar-sesion-email .btn {
+    border: none;
+    color: white;
+    background-color: #000000FF;
+    border-radius: 5px;
+    padding: 10px 20px; /* Ajusta según sea necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+.contenedor-opciones-inicio .iniciar-sesion-email .btn:hover {
+    background-color: #6b6b6bFF;
+    transition: background-color 0.3s ease;
+}
+.contenedor-opciones-inicio .iniciar-sesion-email > div {
+    
+    margin-bottom: 16px; /* Agrega un margen de 16px abajo de cada div hijo */
+}
+
+
+
+.contenedor-opciones-inicio .iniciar-sesion-redes {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    text-align: center; /* Centra el texto dentro del contenedor */
+    
+}
+
+.contenedor-opciones-inicio .iniciar-sesion-redes div {
+    margin-bottom: 14px;
+    
+}
+
+.contenedor-opciones-inicio .iniciar-sesion-redes div .boton-social {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: #eeeeeeFF;
+    padding: 3px 75px; /* Ajusta el relleno para cambiar el tamaño del fondo del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+    transition: background-color 0.3s ease;
+    min-height: 50px;
+    
+}
+
+.contenedor-opciones-inicio .iniciar-sesion-redes div .boton-social img {
+    height: 1.2rem;
+    width: auto;
+}
+
+.contenedor-opciones-inicio .iniciar-sesion-redes div .boton-social span {
+    margin-left: 8px; /* Ajusta según sea necesario */
+}
+
+.contenedor-opciones-inicio .iniciar-sesion-redes div .boton-social:hover {
+    background-color: rgb(212, 212, 212); /* Cambia el color de fondo al pasar el mouse sobre el elemento */
+}
+
+
+
+
+
+
+.contenedor-opciones-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 370px;
+    width: 80%;
+    height: 100%;
+    
+}
+
+.contenedor-opciones-inicio .separador-opciones {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-opciones-inicio .separador-opciones .separador-linea-izq,
+.contenedor-opciones-inicio .separador-opciones .separador-linea-der {
+    flex-grow: 1;
+    height: 1px;
+    width: 153px;
+    background-color: #000000; /* Color gris */
+    margin: 0 5px;
+}
+
+.contenedor-opciones-inicio .separador-opciones span {
+    position: relative;
+    z-index: 1; /* Asegura que la "O" esté sobre las líneas */
+}
+
+
+
+
+
+
+
+
+#mensaje-inicio-sesion.oculto {
+    display: none;
+}
+
+#mensaje-inicio-sesion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    padding: 20px;
+    background-color: #0d0313;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 11rem;
+}
+
+#mensaje-inicio-sesion a {
+    margin-right: 10px;
+}
+#mensaje-inicio-sesion a img {
+    width: 3rem;
+}
+#mensaje-inicio-sesion a img:hover {
+    width: 3.5rem;
+    transition: width 0.5s ease;
+}
+
+#mensaje-prueba {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    top: 79px;
+    left: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+#mensaje-prueba:hover {
+    background-color: #353535;
+    transition: background-color 0.9s ease;
+}
+
+#mensaje-prueba p {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+

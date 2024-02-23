@@ -1,0 +1,1007 @@
+@font-face {
+    font-family: "Ubermove";
+    src: url("../statics/fonts/ubermovetext.woff2") format("woff2"),
+         url("../statics/fonts/ubermovetext2.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    background: #00000000;
+    color: white;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color de fondo */
+}
+.cabecera.menu-abierto {
+    background-color: white;
+}
+
+.cabecera.scrolled {
+    background-color: #ffffff; /* Cambia el color de fondo cuando te desplazas hacia abajo */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al desplazarte */
+}
+
+.cabecera .menu {
+    display: flex;
+    align-items: center;
+}
+
+.cabecera #botonHamburguesa {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.cabecera #botonHamburguesa img {
+    height: 24px;
+    width: auto;
+}
+
+.cabecera .logo img {
+    height: 24px;
+    width: auto;
+    
+}
+.cabecera .boton-delivery, .boton-recolectar {
+    position: relative;
+    background: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    border-radius: 500px;
+    padding: 7px;
+    height: 3rem;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    font-family: Ubermove;
+    
+    
+}
+.cabecera .radio-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.5rem;
+    width: 89%;
+    border-radius: 500px;
+    border: 2px solid transparent;
+}
+
+.cabecera .radio-label {
+    margin-left: 5px;
+    padding: 0.3rem;
+    z-index: 1;
+    
+}
+
+/* Estilo específico cuando aria-checked es true */
+.cabecera .boton-delivery[aria-checked="true"] .radio-button,
+.cabecera .boton-recolectar[aria-checked="true"] .radio-button {
+    background-color: white;
+    border-color: rgba(182, 182, 182, 0.336);
+    
+}
+
+
+.cabecera .buscador {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    background: rgb(226, 226, 226);
+    height: 3rem;
+    width: 15rem;
+    border-radius: 500px;
+    border: 2px solid transparent;
+    margin-right: 25px;
+}
+
+.cabecera .buscador img {
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+    
+}
+.cabecera .buscador input {
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 0.6rem;
+    font-style: oblique;
+    font-family: Ubermove;
+    font-size: 1rem;
+}
+.cabecera .buscador button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+
+.cabecera .botones-compra-users {
+    display: flex;
+    align-items: center;
+    
+}
+.cabecera .botones-compra-users > * {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.cabecera .botones-compra-users .boton-carrito {
+    background: #000000;
+    -webkit-text-fill-color: #ffffff;
+    display: inline-block;
+    padding: 6px;
+    border-radius: 500px;
+    margin-right: 15px;
+    
+    
+}
+.cabecera .botones-compra-users .boton-carrito :hover {
+    background: #383737;
+    border-radius: 500px;
+    
+}
+
+.cabecera .botones-compra-users .boton-carrito button{
+    border: none;
+    outline: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    font-family: Ubermove;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cabecera .botones-compra-users .boton-carrito button :hover{
+    background: #383737;
+    
+    
+}
+.cabecera .botones-compra-users .boton-carrito img{
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+    
+    
+}
+
+.cabecera .botones-compra-users img {
+    height: 20px;
+    width: auto;
+    margin-right: 5px !important;
+    
+}
+
+
+
+.cabecera .boton-iniciar-sesion {
+    margin-left: 15px;
+    background: rgb(226, 226, 226);
+    height: 2rem;
+    width: 9rem;
+    border-radius: 500px;
+    border: 2px solid transparent;
+    margin-right: 15px;
+    
+}
+.cabecera .boton-iniciar-sesion:hover {
+    background: rgb(201, 201, 201);
+    border-radius: 500px;
+    border: 2px solid rgb(201, 201, 201);
+}
+
+.cabecera .boton-iniciar-sesion img {
+    height: 20px;
+    width: auto;
+    margin-right: 0.5rem;
+    order: -1;
+    margin-left: 0.7rem;
+}
+.cabecera .boton-iniciar-sesion, 
+.cabecera .boton-iniciar-sesion * {
+    text-decoration: none !important;
+}
+
+.cabecera .boton-iniciar-sesion p {
+    font-family: Ubermove;
+    color: black; /* Establece el color del texto a negro */
+    margin: 0; /* Ajusta el margen para eliminar el espacio predeterminado del párrafo */
+    display: inline;
+}
+
+.cabecera .boton-registrarse *{
+    text-decoration: none !important;
+    color: black;
+    display: flex;
+}
+
+.cabecera .boton-registrarse {
+    margin-left: 15px;
+    background: rgb(226, 226, 226);
+    height: 2rem;
+    width: 5.5rem;
+    border-radius: 500px;
+    border: 2px solid transparent;
+    margin-right: 15px;
+}
+.cabecera .boton-registrarse:hover {
+    background: rgb(201, 201, 201);
+    border-radius: 500px;
+    border: 2px solid rgb(201, 201, 201);
+}
+
+.cabecera .boton-registrarse p{
+    font-family: Ubermove;
+    margin-left: 0.5rem;
+}
+
+
+
+
+/* Añade este nuevo estilo para los elementos dentro de "cabecera" */
+.cabecera > div {
+    display: flex;
+    align-items: center;
+}
+
+/* Asegúrate de que los elementos internos se ajusten correctamente */
+.cabecera > div:not(:first-child) {
+    margin-left: 10px; /* Ajusta el margen entre los elementos internos */
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.list-foods-wrapper {
+    margin-top: 1rem;
+    position: relative;
+    overflow-x: hidden;
+    white-space: wrap;
+}
+
+.list-foods-columns {
+    display: flex;
+    max-width: 100%;
+    margin: 0 15px;
+    overflow: hidden; /* Añadido para ocultar el desbordamiento */
+    
+}
+
+.list-foods-columns::before,
+.list-foods-columns::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.151) 50%);
+}
+
+.food-options {
+    list-style: none;
+    padding: 2%;
+    display:flex;
+    
+    
+}
+
+.food-options li {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #ff000000;
+    border-radius: 500px;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Ubermove;
+    
+    
+}
+
+
+
+.food-options li img {
+    max-width: 3rem;
+    height: auto;
+    order: -1;
+    margin-bottom: 3%;
+    
+}
+.food-options li span {
+    margin-top: auto;
+}
+.food-options li:hover {
+    cursor: pointer;
+    
+}
+
+.food-options li img:hover {
+    background-color: #dddddd; /* Cambia el color de fondo detrás de la imagen */
+    border-radius: 100%; /* Hace que el fondo sea circular */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.left-arrow {
+    left: 0;
+    order: 5;
+    z-index: 1;
+}
+.left-arrow img {
+    height: auto;
+    width: 1rem;
+}
+
+.right-arrow {
+    right: 0;
+}
+.right-arrow img {
+    height: auto;
+    width: 1rem;
+}
+.left-arrow,
+.right-arrow {
+    border: none;
+}
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: #d8d8d8;
+}
+
+.promos-container {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.promos-container .promos-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+}
+.promos-container .promos-slider:hover {
+    animation-play-state: paused;
+}
+
+.promos-container .promos-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.promos-container .promos-slider .promo-card-1, 
+.promos-container .promos-slider .promo-card-2,
+.promos-container .promos-slider .promo-card-3,
+.promos-container .promos-slider .promo-card-4 {
+    width: auto;
+    background: #c92b2b00;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 35%; /* Ajusta el ancho según sea necesario */
+}
+
+.promos-container .promos-slider .promo-card-2 {
+    background: #142328FF;
+}
+
+.promos-container .promos-slider .promo-card-3 {
+    background: #9f6402FF;
+}
+
+.promos-container .promos-slider .promo-card-1 img,
+.promos-container .promos-slider .promo-card-2 img,
+.promos-container .promos-slider .promo-card-3 img,
+.promos-container .promos-slider .promo-card-4 img {
+    height: 12rem;
+    width: auto;
+    object-fit: cover;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.promo-card-1 *,
+.promo-card-4 * {
+    display: flex;
+    flex: 1;
+    cursor:pointer;
+}
+
+.promo-card-2,
+.promo-card-3 {
+    display: flex;
+    cursor: pointer;
+}
+
+.promo-card-2 .promo-info,
+.promo-card-3 .promo-info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.promo-card-2 h3,
+.promo-card-3 h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: Ubermove;
+}
+
+.promo-card-2 p,
+.promo-card-3 p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+    font-family: Ubermove;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 2px; /* Ajusta la posición vertical según sea necesario */
+    bottom: 0px;
+    right: auto;
+    width: 22%;
+    left: 1px; /* Ajusta la posición horizontal según sea necesario */
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    z-index: 1000;
+    min-height: 100vh;
+}
+
+.menu-desplegable a {
+    
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    margin-bottom: 9px;
+}
+
+.menu-desplegable .separador {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.mas-opciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.mas-opciones .opcion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.menu-desplegable .opcion-registrarse {
+    
+    
+    font-family: Ubermove;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background: #000000FF;
+    border-radius: 5px;
+    
+}
+.menu-desplegable .opcion-iniciar-sesion {
+    font-family: Ubermove;
+    font-size: 1.3rem;
+    color: #000000FF; 
+    background: #e2e2e2FF;
+    border-radius: 5px;
+}
+.menu-desplegable .opcion-registrarse:hover {
+    background: #545454FF;
+}
+.menu-desplegable .opcion-iniciar-sesion:hover {
+    background: #afafafFF;
+}
+.menu-desplegable .opcion-cuentas {
+    font-family: Ubermove;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    font-weight:bold;
+    justify-content: left;
+    
+
+}
+.menu-desplegable .opcion-cuentas:hover {
+    background: rgb(231, 231, 231);
+    border-radius: 5px;
+}
+.menu-desplegable .mensaje-instala-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+    
+}
+.menu-desplegable .mensaje-instala-app img {
+    height: auto;
+    width: 3.5rem;
+    
+}
+.menu-desplegable .mensaje-instala-app p {
+    margin-left: 10px;
+    font-family: Ubermove;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2e2d2d;
+}
+
+.menu-desplegable .opciones-app {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+   
+}
+.menu-desplegable .opciones-app .opcion-1 img{
+    width: 6rem;
+    height: auto;
+}
+.menu-desplegable .opciones-app .opcion-2 img{
+    width: 6rem;
+    height: auto;
+    margin-left: 20px;
+}
+
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .menu-desplegable .mensaje-instala-app {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1%;
+    }
+
+    .menu-desplegable .mensaje-instala-app img {
+        margin-bottom: 5px;
+    }
+
+    .menu-desplegable .opciones-app {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .menu-desplegable .opciones-app .opcion-1 img,
+    .menu-desplegable .opciones-app .opcion-2 img {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}
+
+
+/*cards vip------------------------------------------*/
+
+.seccion-mayor-calificacion {
+    margin-top: 4rem;
+}
+
+.seccion-mayor-calificacion h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+    font-family: Ubermove;
+}
+.seccion-mas-populares h2 {
+    margin-bottom: 0.2rem;
+    font-family: Ubermove;
+}
+.seccion-marcas-nacionales h2 {
+    margin-bottom: 0.2rem;
+    font-family: Ubermove;
+}
+.seccion-marcas-internacionales h2 {
+    margin-bottom: 0.2rem;
+    font-family: Ubermove;
+}
+
+.flechas-desplazamiento {
+    display: flex;
+    justify-content: end;
+}
+
+.flechas-desplazamiento button{
+    background: none;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.8rem;
+    margin-right: 8px;
+}
+.flechas-desplazamiento button * {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    width: 1rem;
+    height: auto;
+    background-color: #e2e2e2;
+    border-radius: 500px;
+    padding: 10px;
+    
+    
+}
+.flechas-desplazamiento button *:hover {
+    background: #dadada;
+    
+}
+.flecha-derecha {
+    padding-right: 40px;
+}
+
+.cards-mayor-calificacion {
+    
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    font-family: Ubermove;
+    
+    
+}
+.cards-mas-populares {
+    
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    font-family: Ubermove;
+    
+    
+}
+.cards-marcas-nacionales {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    font-family: Ubermove;
+    
+    
+}
+.cards-marcas-internacionales {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    font-family: Ubermove;
+}
+
+.cards-marcas-nacionales::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    width: 200px; /* Ajusta el ancho de cada card según sea necesario */
+    min-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 45%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.favorito-btn {
+    position: relative;
+    top: -7.5rem;
+    right: -9.5rem;
+    width: 30px;
+    height: 30px;
+    background: url('../statics/images/restaurants/favs/no-select.png') center/cover no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    
+    
+}
+
+.favorito-btn.selected {
+    background: url('../statics/images/restaurants/favs/select.png') center/cover no-repeat;
+}
+
+.informacion-restaurante {
+    padding: 3px;
+    font-family: Ubermove;
+}
+
+.informacion-restaurante h3 {
+    margin: 0;
+    font-family: Ubermove;
+}
+
+.vip-icon {
+    width: 25px;
+    height: 25px;
+    background: url('../statics/icons_search/top_eats_badge.png') center/cover no-repeat;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 5px;
+}
+.Titulo-restaurant {
+    display: flex;
+}
+.Titulo-restaurant h3 {
+    margin-right: 5%;
+}
+
+.separador-secciones {
+    width: 100%;
+    height: 1px; /* Altura de la línea */
+    background-color: #ccc; /* Color de la línea */
+    margin-bottom: 5rem !important;
+    margin: 20px 0; /* Margen superior e inferior para separación */
+}
+
+
+/*estilos para pre footer*/
+
+.enlaces-seccion {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.columna-izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    margin-left: 3rem;
+}
+.columna-izquierda .logo-uber-pre img {
+    margin-bottom: 3rem;
+    margin-left: 0.5rem;
+    width: 8rem;
+    height: auto;
+    
+    
+}
+
+.columna-izquierda img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.columna-izquierda button {
+    background: none;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.columna-izquierda button img {
+    width: 140px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-top: 65%;
+}
+
+.columna-central, .columna-derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.columna-central a, .columna-derecha a {
+    font-family: Ubermove;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000000; /* Ajusta el color del texto según sea necesario */
+}
+.columna-central a:hover, .columna-derecha a:hover {
+    text-decoration: underline;
+}
+.columna-central {
+    margin-left: 12rem;
+}
+.columna-derecha {
+    margin-right: 12rem;
+}
+.idioma {
+    display: flex;
+    align-items: center;
+    font-family: Ubermove;
+    
+}
+.idioma:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.idioma img {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 5px;
+}
+
+
+/*Estilos del footer*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding-bottom: 30px;
+    color: #000000;
+    font-family: Ubermove;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de los elementos a columna */
+    align-items: flex-start; /* Alineamos los elementos a la izquierda */
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon-button {
+    background: none;
+    border: none;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.footer-icon-button img {
+    width: 15px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-right nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+}
+
+.footer-right nav li {
+    margin-right: 20px;
+    margin-bottom: 1rem;
+    
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 14px;
+    margin-left: 65%;
+}
+
+.footer-right nav a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #333; /* Cambia el color del texto según sea necesario */
+}
+
+.footer-right nav a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el mouse sobre los enlaces */
+}
+
+/* Estilos para fondo del menú */
+
+.fondo-oscuro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Puedes ajustar la opacidad según tus preferencias */
+    z-index: 999;
+}
