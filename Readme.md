@@ -49,10 +49,6 @@ Espero que te haya gustado la pagina y que te haya sido de utilidad.
 Todas las marcas, simbolos, referencias, entre otros que referencien a Uber, UberEats, o cualquiera de sus filiares, son meramente de uso educativo y demostrativo y no representan un uso legitimo o ilegal, cualquier duda o sugerencia, he dejado mis datos de contacto en la pagina "login".
 
 Autor: Jesús Daniel Nava Alcázar
-Email: dev.daniel.alcazar@gmail.com
-Web: https://portafolio-jesus-daniel.netlify.app/
-Github: https://github.com/DevDanielAlcazar
-Linkedin: https://www.linkedin.com/in/jesus-daniel-nava-alcazar/
 Whatsapp: +52 477 569 4198
 
 Licencia: Este proyecto esta bajo licencia MIT. que es 
