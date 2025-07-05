@@ -10,7 +10,7 @@ La pagina esta hecha para ser utilizada en un navegador web puesto que Uber util
 
 No he utilizado bibliotecas o frameworks para la creacion de la pagina, esto garantiza un codigo simple, facil de entender y facil de mantener. en posteriores proyectos realizare otros sitios con bibliotecas y frameworks.
 
-La pagina esta hecha con fines educativos y no está afiliado ni respaldado por Uber Eats ni por niiinguno de sus filiares.
+La pagina esta hecha con fines educativos y no está afiliado ni respaldado por Uber Eats ni por ninguno de sus filiares.
 
 ## Características Principales
 
